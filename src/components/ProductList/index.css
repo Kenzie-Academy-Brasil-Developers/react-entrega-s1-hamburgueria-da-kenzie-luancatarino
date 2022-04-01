@@ -1,0 +1,16 @@
+.productList  {
+    display: flex;
+    width: 90%;
+    margin: 15px auto;
+    overflow-x: auto;
+}
+
+@media (min-width: 480px) {
+    .productList  {
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        width: 80%;
+        margin: 35px auto;
+    }
+}
