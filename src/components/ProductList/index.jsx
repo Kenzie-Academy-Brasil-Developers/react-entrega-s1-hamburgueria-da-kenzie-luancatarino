@@ -1,14 +1,16 @@
 import "./index.css";
 import Product from "../Product";
 
-function ProductList({ products, handleClick }) {
+function ProductList({ products, handleClick, filteredProducts }) {
+    console.log(filteredProducts);
     return (
         <div className="productList">
-            {products.map((product) => {
-                return <Product key={product.id} product={product} handleClick={handleClick} />;
+            {filteredProducts.length > 0 && 
+            filteredProducts.map((product) => {
+                return <Product key={product.id} product={product} handleClick={handleClick} />
             })}
         </div>
-    );
+        );
 }
 
 export default ProductList;

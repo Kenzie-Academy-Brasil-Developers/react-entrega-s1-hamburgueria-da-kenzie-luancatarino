@@ -1,0 +1,63 @@
+.cartProduct {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    margin-bottom: -20px;
+    align-items: center;
+}
+
+.cartProductImg {
+    background: #e0e0e0;
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+}
+
+.cartProductImg img {
+    width: 70px;
+    height: 70px;
+}
+
+.cartProductDetails h2 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #333333;
+    max-width: 10ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cartProductDetails p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #828282;
+    margin-top: -10px;
+}
+
+.cartProductPrice {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 24px;
+    color: #27ae60;
+    margin-top: 12px;
+}
+
+.removeCartProduct {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #bdbdbd;
+    border: none;
+    background: none;
+}

@@ -1,0 +1,51 @@
+.cartSeparation {
+    width: 340px;
+    height: 2px;
+    background: #e0e0e0;
+    margin: 30px auto 0 auto;
+}
+
+.cartProductTotal {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartTotal h3 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.cartTotal p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #828282;
+}
+
+.removeAll {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #828282;
+    height: 60px;
+    border: 2px solid #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #e0e0e0;
+}
