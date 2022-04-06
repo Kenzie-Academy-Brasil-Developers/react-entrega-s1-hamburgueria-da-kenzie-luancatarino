@@ -36,9 +36,9 @@
 }
 
 .btnSearch {
-    position: relative;
+    position: absolute;
     margin-top: 6px;
-    margin-left: 250px;
+    right: 30px;
     cursor: pointer;
     line-height: 1.6rem;
     background: #27ae60;
@@ -59,27 +59,28 @@
     }
 
     .btnSearch {
+        position: relative;
+        right: 0px;
         margin-left: 270px;
     }
 
     .headerBackground {
         height: 80px;
     }
-    
+
     .headerContent {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 80px;
     }
-    
-   .header {
-       width: 80%;
-   }
+
+    .header {
+        width: 80%;
+    }
 
     .logo {
         margin: 0;
         text-align: center;
     }
 }
-

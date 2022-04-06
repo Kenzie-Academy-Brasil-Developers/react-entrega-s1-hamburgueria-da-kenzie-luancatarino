@@ -1,6 +1,11 @@
 .cart {
     margin: 0 auto;
+    margin-left: 15px;;
+    margin-bottom: 5px;
+    height: 80%;
     width: 90%;
+    background: #f5f5f5;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .cartTitleBackground {

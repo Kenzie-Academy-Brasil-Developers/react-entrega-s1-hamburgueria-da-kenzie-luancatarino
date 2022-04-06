@@ -1,9 +1,11 @@
 .cartProduct {
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
     margin-top: 35px;
     margin-bottom: -20px;
     align-items: center;
+    width: 90%;
 }
 
 .cartProductImg {
@@ -25,7 +27,7 @@
     font-size: 18px;
     line-height: 24px;
     color: #333333;
-    max-width: 10ch;
+    max-width: 7ch;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
