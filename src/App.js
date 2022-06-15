@@ -1,8 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useState, useEffect } from "react";
 import Cart from "./components/Cart";
-import Product from "./components/Product";
 import ProductList from "./components/ProductList";
 import Header from "./components/Header";
 
@@ -12,24 +10,38 @@ function App() {
     const [currentSale, setCurrentSale] = useState([]);
     const [valueInput, setValueInput] = useState("");
 
+    useEffect(() => {
+        fetch("https://hamburgueria-kenzie-json-serve.herokuapp.com/products")
+            .then((res) => res.json())
+            .then((res) => {
+                setProducts(res);
+                setFilteredProducts(res);
+            });
+    }, []);
+
     function showProducts(valueInput) {
         const allResearchedProducts = products.filter(
             (product) =>
                 product.name
                     .toLowerCase()
                     .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "").includes(valueInput
-                        .toLowerCase()
-                        .normalize("NFD")
-                        .replace(/[\u0300-\u036f]/g, ""))
-                     ||
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .includes(
+                        valueInput
+                            .toLowerCase()
+                            .normalize("NFD")
+                            .replace(/[\u0300-\u036f]/g, "")
+                    ) ||
                 product.category
                     .toLowerCase()
                     .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "").includes(valueInput
-                        .toLowerCase()
-                        .normalize("NFD")
-                        .replace(/[\u0300-\u036f]/g, ""))   
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .includes(
+                        valueInput
+                            .toLowerCase()
+                            .normalize("NFD")
+                            .replace(/[\u0300-\u036f]/g, "")
+                    )
         );
 
         valueInput.length === 0 ? setFilteredProducts(products) : setFilteredProducts(allResearchedProducts);
@@ -41,15 +53,6 @@ function App() {
             ? alert("Você já adicionou esse item no carrinho!")
             : setCurrentSale([...currentSale, productCart]);
     }
-
-    useEffect(() => {
-        fetch("https://hamburgueria-kenzie-json-serve.herokuapp.com/products")
-            .then((res) => res.json())
-            .then((res) => {
-                setProducts(res);
-                setFilteredProducts(res);
-            });
-    }, []);
 
     return (
         <div className="content">

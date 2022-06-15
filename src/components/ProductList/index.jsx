@@ -1,7 +1,7 @@
 import "./index.css";
 import Product from "../Product";
 
-function ProductList({ products, handleClick, filteredProducts }) {
+function ProductList({ handleClick, filteredProducts }) {
     console.log(filteredProducts);
     return (
         <div className="productList">
